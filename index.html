@@ -28,6 +28,24 @@
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <!-- imperative to put this below jquery -->
+  <script type="text/javascript">
+    var socket = io();
+    $('form').submit(function(){
+      // when someone has emitted a message,
+      // the $m references back to the input id
+      // the .val resets the input to empty
+      socket.emit('chat message', $('#m').val());
+      // this communicates with our emmitter back in app.js,
+      // must be the same as what you named it
+      return false;
+    });
+    socket.on('chat message', function(msg){
+      // we want to append the list item aka the message
+      $('#messages').append($("<li>").txt(msg));
+    });
 </body>
 
 </html>
+
+
