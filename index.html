@@ -34,11 +34,15 @@
     $('form').submit(function(){
       // when someone has emitted a message,
       // the $m references back to the input id
-      // the .val resets the input to empty
+      // the .val resets the input to empty, its a getter
+      // it gets the value of whats inside the message
       socket.emit('chat message', $('#m').val());
+      $('#m').val('');
       // this communicates with our emmitter back in app.js,
       // must be the same as what you named it
       return false;
+      // we want to return false because we want to make sure
+      // when you click nothing happens
     });
     socket.on('chat message', function(msg){
       // we want to append the list item aka the message
