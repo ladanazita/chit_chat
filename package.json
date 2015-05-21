@@ -1,0 +1,22 @@
+{
+  "name": "chit_chat",
+  "version": "0.0.1",
+  "description": "A real time chit chapplication",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ladanazita/chit_chat"
+  },
+  "keywords": [
+    "sockets"
+  ],
+  "author": "Ladan Azita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ladanazita/chit_chat/issues"
+  },
+  "homepage": "https://github.com/ladanazita/chit_chat"
+}
