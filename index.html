@@ -44,10 +44,12 @@
       // we want to return false because we want to make sure
       // when you click nothing happens
     });
+
     socket.on('chat message', function(msg){
       // we want to append the list item aka the message
-      $('#messages').append($("<li>").txt(msg));
+      $('#messages').append($("<li>").text(msg));
     });
+  </script>
 </body>
 
 </html>
